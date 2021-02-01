@@ -1,0 +1,125 @@
+@import '../styles.scss';
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+
+  .nav-menu-bar li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 25px 0 25px;
+  }
+
+  .nav-menu-bar li a {
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  // white menu
+  .nav-menu-bar-white li a {
+    color: $whiteColor;
+  }
+  .nav-menu-bar-white li a:hover {
+    color: $greyColor;
+  }
+  // grey menu
+  .nav-menu-bar-grey li a {
+    color: $greyColor;
+  }
+  .nav-menu-bar-grey li a:hover {
+    color: $whiteColor;
+  }
+
+  .nav-menu-line {
+    max-width: 1785px;
+    width: 100%;
+    height: 1px;
+    margin-top: 40px;
+  }
+  // white line
+  .nav-menu-line-white {
+    background-color: $whiteColor;
+  }
+  // grey line
+  .nav-menu-line-grey {
+    background-color: $greyColor;
+  }
+
+  .nav-menu-bar-adaptive {
+    margin-top: 42px;
+    .nav-menu-bar-adaptive-desc span {
+      margin-left: 44px;
+      color: $whiteColor;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .nav-menu-bar-adaptive-desc span:hover {
+      color: $greyColor;
+    }
+    .nav-menu-bar-adaptive-list {
+      width: 0;
+      height: 100vh;
+      background: rgba(128, 128, 128, 0.4);
+      overflow: hidden;
+      transition: 1s cubic-bezier(0.11, 1.57, 0, 1.69);
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: $whiteColor;
+
+      .nav-menu-bar-adaptive-list-content {
+        margin-top: 40px;
+
+        .nav-menu-bar-adaptive li {
+          list-style-type: none;
+          margin-left: 20px;
+          margin-top: 10px;
+        }
+
+        .nav-menu-bar-adaptive li a {
+          text-decoration: none;
+          color: $whiteColor;
+        }
+
+        .nav-menu-bar-adaptive li a:hover {
+          color: black;
+        }
+      }
+    }
+
+    .nav-menu-bar-adaptive-list.nav-bar-open {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 160px;
+      box-shadow: 50px 0 100px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.nav-menu {
+  .nav-menu-bar-adaptive {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 240px) and (max-width: 767px) {
+  .nav-menu {
+    display: block;
+    padding-top: 0;
+
+    .nav-menu-bar-adaptive {
+      display: block;
+    }
+    .nav-menu-bar {
+      display: none;
+    }
+
+    .nav-menu-line {
+      display: none;
+    }
+  }
+}
