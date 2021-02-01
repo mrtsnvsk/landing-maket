@@ -8,10 +8,15 @@ const Header = () => {
   const [scrollTextColor] = useState('white');
   const [menuTextColor] = useState('white');
   const [menuLineColor] = useState('white');
+  const [lineClass] = useState('nav-menu-line-header');
 
   return (
     <div className='header-container'>
-      <NavMenu menuTextColor={menuTextColor} menuLineColor={menuLineColor} />
+      <NavMenu
+        menuTextColor={menuTextColor}
+        menuLineColor={menuLineColor}
+        lineClass={lineClass}
+      />
       <ScrollDown scrollTextColor={scrollTextColor} scrollText={scrollText} />
     </div>
   );

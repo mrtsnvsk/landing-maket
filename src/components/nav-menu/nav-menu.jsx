@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './nav-menu.scss';
 
-const NavMenu = ({ menuTextColor, menuLineColor }) => {
+const NavMenu = ({ menuTextColor, menuLineColor, lineClass }) => {
   const [open, setOpen] = useState('');
 
   return (
@@ -20,7 +20,9 @@ const NavMenu = ({ menuTextColor, menuLineColor }) => {
           <a href='#?'>CONTACT</a>
         </li>
       </nav>
-      <div className={`nav-menu-line nav-menu-line-${menuLineColor}`}></div>
+
+      {/* nav-menu-line */}
+      <div className={`${lineClass} nav-menu-line-${menuLineColor}`}></div>
       {/* Мобильный навбар */}
       <div className='nav-menu-bar-adaptive'>
         <div className='nav-menu-bar-adaptive-desc'>

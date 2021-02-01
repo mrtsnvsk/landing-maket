@@ -9,11 +9,16 @@ const Main = () => {
   const [scrollTextColor] = useState('grey');
   const [menuTextColor] = useState('grey');
   const [menuLineColor] = useState('grey');
+  const [lineClass] = useState('nav-menu-line-main');
 
   return (
     <div className='main-container'>
       <div className='main-container-navbar'>
-        <NavMenu menuTextColor={menuTextColor} menuLineColor={menuLineColor} />
+        <NavMenu
+          menuTextColor={menuTextColor}
+          menuLineColor={menuLineColor}
+          lineClass={lineClass}
+        />
       </div>
       <MainContent />
       <ScrollDown scrollTextColor={scrollTextColor} scrollText={scrollText} />
